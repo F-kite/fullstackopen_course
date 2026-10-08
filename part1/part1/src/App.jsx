@@ -7,9 +7,7 @@ const Statistics = ({ statistic }) => {
     return average
   }
 
-  const CalcPositive = () => {
-    return statistic.good / statistic.all * 100
-  }
+  const CalcPositive = () => statistic.good / statistic.all * 100
 
   return (
     <>
@@ -35,20 +33,6 @@ const Statistics = ({ statistic }) => {
   )
 }
 
-const Anecdotes = ({ anecdotes, selected, votes }) => {
-
-  return (
-    <div>
-      <p>
-        {anecdotes[selected]}
-      </p>
-      <p>has {votes[selected]} votes</p>
-    </div>
-
-  )
-}
-
-const Button = ({ onClick, text }) => <button onClick={onClick}>{text}</button>
 const StatisticLine = ({ text, value }) => {
   return (
     <tr>
@@ -62,6 +46,18 @@ const StatisticLine = ({ text, value }) => {
   )
 }
 
+const Anecdotes = ({ anecdotes, selected, votes }) => {
+  return (
+    <div>
+      <p>
+        {anecdotes[selected]}
+      </p>
+      <p>has {votes[selected]} votes</p>
+    </div>
+  )
+}
+
+const Button = ({ onClick, text }) => <button onClick={onClick}>{text}</button>
 
 
 const App = () => {
@@ -84,31 +80,25 @@ const App = () => {
     'The only way to go fast, is to go well.'
   ]
 
-  const handleGoodIncrease = () => {
-    setStatistic({
-      ...statistic,
-      good: statistic.good + 1,
-      all: statistic.all + 1
-    })
-  }
-  const handleNeutralIncrease = () => {
-    setStatistic({
-      ...statistic,
-      neutral: statistic.neutral + 1,
-      all: statistic.all + 1
-    })
-  }
-  const handleBadIncrease = () => {
-    setStatistic({
-      ...statistic,
-      bad: statistic.bad + 1,
-      all: statistic.all + 1
-    })
-  }
+  const handleGoodIncrease = () => setStatistic({
+    ...statistic,
+    good: statistic.good + 1,
+    all: statistic.all + 1
+  })
 
-  const handleOutputAnecdote = () => {
-    setSelected(Math.floor((Math.random() * anecdotes.length)))
-  }
+  const handleNeutralIncrease = () => setStatistic({
+    ...statistic,
+    neutral: statistic.neutral + 1,
+    all: statistic.all + 1
+  })
+
+  const handleBadIncrease = () => setStatistic({
+    ...statistic,
+    bad: statistic.bad + 1,
+    all: statistic.all + 1
+  })
+
+  const handleOutputAnecdote = () => setSelected(Math.floor((Math.random() * anecdotes.length)))
 
   const handleVote = () => {
     const copy = { ...votes }
