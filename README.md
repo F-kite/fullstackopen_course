@@ -3,7 +3,7 @@ Deep Dive Into Modern Web Development
 
 [Cource](https://fullstackopen.com/en/)
 - [x] [Part 0](https://fullstackopen.com/en/part0)
-- [ ] [Part 1](https://fullstackopen.com/en/part1)
+- [x] [Part 1](https://fullstackopen.com/en/part1)
 - [ ] [Part 2](https://fullstackopen.com/en/part2)
 - [ ] [Part 3](https://fullstackopen.com/en/part3)
 - [ ] [Part 4](https://fullstackopen.com/en/part4)
