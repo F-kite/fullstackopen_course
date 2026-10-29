@@ -1,7 +1,7 @@
 const Note = ({ note, toggleImportance }) => {
   let labelImportance = note.important ? "make not important" : "make important"
 
-  return <li>
+  return <li className='note'>
     <p>
       {note.content}
     </p>
