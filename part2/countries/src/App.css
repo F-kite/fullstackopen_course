@@ -1,0 +1,16 @@
+.searchResult {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: auto;
+  height: 2rem;
+}
+
+.searchResult button {
+  height: fit-content;
+}
+
+.imgFlag{
+  width: 20%;
+  border: 1px solid black;
+}
